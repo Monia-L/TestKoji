@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.containerArticles {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  max-width: 80vw;
+  flex-wrap: wrap;
+}
+.containerArticle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #7ac6ae;
+  width: 400px;
+  margin: 40px;
+  padding: 50px;
+  border-radius: 3%;
+  cursor: pointer;
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  a {
+    color: #ffff00;
+    text-decoration: none;
+  }
+}
