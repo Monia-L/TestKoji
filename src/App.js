@@ -1,22 +1,18 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import ArticlesList from "./ArticlesList";
-import ArticleDescription from "./ArticleDescription";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import ArticlesList from "./pages/ArticlesList";
+import ArticleDescription from "./pages/ArticleDescription";
 
-import "./app.scss";
+import "./asset/app.scss";
 
 const App = () => {
   return (
     <BrowserRouter>
       <>
-        <div className="container">
+        <Switch>
           <Route exact path="/" component={ArticlesList} />
-        </div>
-        <Route
-          exact
-          path="/article-description"
-          component={ArticleDescription}
-        />
+          <Route exact path="/article/:id" component={ArticleDescription} />
+        </Switch>
       </>
     </BrowserRouter>
   );
